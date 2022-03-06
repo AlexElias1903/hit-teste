@@ -1,0 +1,12 @@
+service: nodeless
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: sa-east-1
+
+functions:
+  hello:
+    handler: handler.hello
