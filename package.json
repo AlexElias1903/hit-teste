@@ -1,0 +1,11 @@
+{
+    "name": "nodeless",
+    "version": "1.0.0",
+    "description": "Basic CI/CD deployment setup for AWS Lambda functions in Node using the Serverless Framework",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "Alex Elias",
+    "license": "ISC"
+  }
