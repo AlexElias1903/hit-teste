@@ -5,8 +5,9 @@ module.exports.loginUser = async (event, context, callback) => {
   const uri = process.env.URL_MONGO;
   await mongoose.connect(uri);
   try {
-    const user = JSON.parse(event.body.user);
-    const password = JSON.parse(event.body.password);
+    const body = JSON.parse(event.body)
+    const user = body.user;
+    const password = body.password;
     if (!user || !password) {
       throw Error("Usuario e senha são obrigatorios")
     }
@@ -15,12 +16,12 @@ module.exports.loginUser = async (event, context, callback) => {
       password
     });
     if (result) {
-      res.status(200).json({ msg: "Ok", usuario: result.user, role: result.role });
+      return ({ msg: "Ok", usuario: result.user, role: result.role });
     } else {
-      res.status(400).json({ msg: "Falha no login" });
+      return ({ msg: "Usuário ou senha inválidos" });
     }
   } catch (err) {
     console.log(err);
-    next(err);
+    return ({ msg: err });
   }
 }
