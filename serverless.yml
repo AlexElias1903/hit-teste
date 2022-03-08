@@ -10,6 +10,6 @@ provider:
 
 functions:
   hello:
-    handler: handler.hello
+    handler: src/handler.hello
   addUser:
-    handler: src/addUser.handler
+    handler: src/addUser/handler.addUser
