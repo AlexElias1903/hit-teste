@@ -13,3 +13,5 @@ functions:
     handler: src/handler.hello
   addUser:
     handler: src/addUser/handler.addUser
+  loginUser:
+    handler: src/loginUser/handler.loginUser
