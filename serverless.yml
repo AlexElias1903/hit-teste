@@ -19,3 +19,5 @@ functions:
     handler: src/setIntroduction/handler.setIntroduction
   getIntroduction:
     handler: src/getIntroduction/handler.getIntroduction
+  sendForm:
+    handler: src/sendForm/handler.sendForm
